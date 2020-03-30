@@ -42,7 +42,7 @@ int gcd(int divident, int divisor)
   {
     return divident;
   }
-  return gcd(divisor , divident % divisor);
+  return gcd(divisor, divident % divisor);
 }
 
 int lcm(int num1, int num2)
