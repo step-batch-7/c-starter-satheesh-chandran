@@ -38,11 +38,7 @@ int cube(int num)
 
 int gcd(int divident, int divisor)
 {
-  if (divisor == 0)
-  {
-    return divident;
-  }
-  return gcd(divisor, divident % divisor);
+  return !divisor ? divident : gcd(divisor, divident % divisor);
 }
 
 int lcm(int num1, int num2)
