@@ -8,7 +8,6 @@ int cube(int);
 int gcd(int, int);
 int lcm(int, int);
 double simple_interest(double, double, double);
-double power(double, double);
 double compound_interest(double, double, double);
 double fahrenheit_to_centigrade(double);
 double centigrade_to_fahrenheit(double);
@@ -51,16 +50,6 @@ double simple_interest(double principle, double rate, double period)
   return (principle * rate * period) / 100;
 }
 
-double power(double number, double power_num)
-{
-  double multiple = number;
-  for (double count = 1; count < power_num; count++)
-  {
-    multiple = multiple * multiple;
-  }
-  return multiple;
-}
-
 double compound_interest(double principle, double rate, double period)
 {
   return principle * pow((1 + (rate / 100)), period) - principle;
@@ -76,10 +65,7 @@ double centigrade_to_fahrenheit(double centigrade){
 
 double greatest_of_two(double num1, double num2)
 {
-  if (num1 > num2){
-    return num1;
-  }
-  return num2;
+  return num1 > num2 ? num1 : num2;
 }
 
 double greatest_of_three(double num1, double num2, double num3){
